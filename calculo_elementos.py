@@ -19,7 +19,7 @@ def find_optimal_elements(elements, min_calories, max_weight):
             else:
                 dp[i][w] = dp[i - 1][w]
     optimal_elements = []
-    
+
     w = max_weight
     for i in range(n, 0, -1):
         if dp[i][w] != dp[i - 1][w]:
@@ -49,4 +49,4 @@ if __name__ == "__main__":
         for element in optimal_elements:
             print(element.name)
     else:
-        print("No se encontró una combinación que cumpla con los requisitos.")
+        print("No se encontró una combinación que cumpla con los requisitos. Por favor intente nuevamente")
